@@ -171,7 +171,7 @@ ENTITY_DEFINITIONS = {
         CONF_NAME: "last completed",
         CONF_ICON: "mdi:cash-100",
         CONF_DEVICE_CLASS: DEVICE_CLASS_TIMESTAMP,
-        CONF_UNIT_OF_MEASUREMENT: "ISO8601",
+        CONF_UNIT_OF_MEASUREMENT: None,
         CONF_ATTR: [],
     },
     ENTITY_NEXT_MOW: {
@@ -179,7 +179,7 @@ ENTITY_DEFINITIONS = {
         CONF_NAME: "next mow",
         CONF_ICON: "mdi:chevron-right",
         CONF_DEVICE_CLASS: DEVICE_CLASS_TIMESTAMP,
-        CONF_UNIT_OF_MEASUREMENT: "ISO8601",
+        CONF_UNIT_OF_MEASUREMENT: None,
         CONF_ATTR: [],
     },
     ENTITY_MOWING_MODE: {
@@ -561,4 +561,3 @@ class IndegoHub:
             self.entities[ENTITY_LAWN_MOWED].add_attribute(
                 {"next_mow": self.indego.next_mow.strftime("%Y-%m-%d %H:%M")}
             )
-
